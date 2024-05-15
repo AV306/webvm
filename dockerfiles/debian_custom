@@ -1,9 +1,9 @@
 FROM --platform=i386 i386/debian:buster
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get clean && apt-get update && apt-get -y upgrade
-RUN apt-get -y install nano apt-utils gcc python3 vim zip unzip zip nodejs \
+RUN apt-get -y install nano apt-utils gcc g++ python3 vim zip unzip zip nodejs \
 	fakeroot dbus base whiptail hexedit patch wamerican ucf manpages wget \
-	file make dialog curl less cowsay netcat-openbsd
+	file make dialog curl less cowsay netcat-openbsd nc
 
 #SHELL ["/bin/bash", "-c"]
 #RUN curl -s "https://get.sdkman.io" | bash
